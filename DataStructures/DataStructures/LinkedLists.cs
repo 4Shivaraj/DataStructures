@@ -33,6 +33,27 @@ namespace DataStructure
             }
             Console.WriteLine($" Added {value} at start of the linkedlist");
         }
+        public void AppendNode(int value)
+        {
+            Node node = new Node(value);
+            //Check wheather the list is empty then creates node as head
+            if (Head == null & Tail == null)
+            {
+                Head = node;
+                Tail = node;
+            }
+            else
+            {
+                Node temp = Head;
+                ////If node than add new node as head 
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine($"Added {value} at start of the linkedlist");
+        }
         internal void Display()
         {
             //temp variable will head
