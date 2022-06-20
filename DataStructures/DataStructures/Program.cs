@@ -45,30 +45,37 @@ namespace DataStructure
             //linkedLists.Display();
             //Console.WriteLine("\n-------------------------------");
 
-            //UC-5
+            ////UC-5
+            //linkedLists.AppendNode(56);
+            //linkedLists.AppendNode(30);
+            //linkedLists.AppendNode(70);
+            //Console.WriteLine("Delete First element");
+            //linkedLists.DeleteNodeAtFirst();
+            //linkedLists.Display();
+            //Console.WriteLine("\n-------------------------------");
+
+            //UC-6
             linkedLists.AppendNode(56);
             linkedLists.AppendNode(30);
             linkedLists.AppendNode(70);
-            Console.WriteLine("Delete First element");
-            linkedLists.DeleteNodeAtFirst();
+            Console.WriteLine("Delete Last element");
+            linkedLists.DeleteNodeAtLast();
             linkedLists.Display();
             Console.WriteLine("\n-------------------------------");
-
 
         }
     }
 }
 
-//UC-5
-//Ability to delete the first element in the LinkedList of sequence 56->30->70 - Write pop method.
-//- Note there is new head
-//- Final Sequence: 30->70
+//UC-6
+//Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
+//- Note there is new tail
+//- Final Sequence: 56->30
 
 //Result
 //Added 56 at start of the linkedlist
 //Added 30 at start of the linkedlist
 //Added 70 at start of the linkedlist
-//Delete First element
-//Removed from linkedlist :56
+//Delete Last element
 //Linked List:
-//30-> 70
+//56-> 30
