@@ -54,23 +54,42 @@ namespace DataStructure
             //linkedLists.Display();
             //Console.WriteLine("\n-------------------------------");
 
-            //UC-6
-            linkedLists.AppendNode(56);
-            linkedLists.AppendNode(30);
-            linkedLists.AppendNode(70);
-            Console.WriteLine("Delete Last element");
-            linkedLists.DeleteNodeAtLast();
+            ////UC-6
+            //linkedLists.AppendNode(56);
+            //linkedLists.AppendNode(30);
+            //linkedLists.AppendNode(70);
+            //Console.WriteLine("Delete Last element");
+            //linkedLists.DeleteNodeAtLast();
+            //linkedLists.Display();
+            //Console.WriteLine("\n-------------------------------");
+
+            //UC-7
+            Node node1 = new Node(56);
+            Node node2 = new Node(30);
+            Node node3 = new Node(70);
+            node1.next = node2;
+            node2.next = node3;
+            linkedLists.Head=node1;
+            Console.WriteLine("Search For Node value 30");
             linkedLists.Display();
+            if (linkedLists.Search(30))
+            {
+                Console.WriteLine("\nNode with value 30 is available in Linked list");
+            }
             Console.WriteLine("\n-------------------------------");
+
+
+
+
 
         }
     }
 }
 
 //UC-6
-//Ability to delete the last element in the LinkedList of sequence 56->30->70 - Write popLast method
-//- Note there is new tail
-//- Final Sequence: 56->30
+/// Ability to search LinkedList to find Node with value 30
+//- Write MSTest Test Case as demonstrated in class
+//-Loop through LinkedList to find node with key 30
 
 //Result
 //Added 56 at start of the linkedlist
