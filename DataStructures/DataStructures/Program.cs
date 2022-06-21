@@ -86,15 +86,13 @@ namespace DataStructure
     }
 }
 
-//UC-6
-/// Ability to search LinkedList to find Node with value 30
+//UC-7
+//Ability to search LinkedList to find Node with value 30
 //- Write MSTest Test Case as demonstrated in class
 //-Loop through LinkedList to find node with key 30
 
 //Result
-//Added 56 at start of the linkedlist
-//Added 30 at start of the linkedlist
-//Added 70 at start of the linkedlist
-//Delete Last element
-//Linked List:
-//56-> 30
+//Search For Node value 30
+// Linked List :
+//56-> 30-> 70
+//Node with value 30 is available in Linked list

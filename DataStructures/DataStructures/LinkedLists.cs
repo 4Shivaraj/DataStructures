@@ -88,6 +88,7 @@ namespace DataStructure
                 newNode.next = temp.next;
                 temp.next = newNode;
             }
+            Console.WriteLine("Added at in between: " + value);
         }
         public void DeleteNodeAtFirst()
         {
