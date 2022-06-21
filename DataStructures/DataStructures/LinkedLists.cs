@@ -121,6 +121,45 @@ namespace DataStructure
             //After getting this node change its location to null
             temp.next = null;
         }
+        public int getCount()
+        {
+            Node temp = Head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
+
+        }
+        public void deleteNode(int value)
+        {
+            // Store head node
+            Node temp = Head, prev = null;
+
+            // If head node itself holds the key to be deleted
+            if (temp != null && temp.data == value)
+            {
+                // Changed head
+                Head = temp.next;
+                return;
+            }
+
+            // Search for the key to be deleted, keep track of  previous node as we need to change temp.next
+            while (temp != null && temp.data != value)
+            {
+                prev = temp;
+                temp = temp.next;
+            }
+
+            // If key was not present in linked list
+            if (temp == null)
+                return;
+
+            // Unlink the node from linked list
+            prev.next = temp.next;
+        }
         public void Display()
         {
             //temp variable will head
@@ -141,5 +180,8 @@ namespace DataStructure
             }
 
         }
+
+
+
     }
 }

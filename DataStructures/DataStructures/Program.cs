@@ -80,29 +80,51 @@ namespace DataStructure
 
 
             //UC-8
+            //Console.WriteLine("Add Node After Node value 30 ");
+            //linkedLists.AppendNode(56);
+            //linkedLists.AppendNode(30);
+            //linkedLists.AppendNode(70);
+            //linkedLists.InsertNode(40, 30);
+            //linkedLists.Display();
+            //Console.WriteLine("\n-------------------------------");
+
+            //UC-9
             Console.WriteLine("Add Node After Node value 30 ");
             linkedLists.AppendNode(56);
             linkedLists.AppendNode(30);
+            linkedLists.AppendNode(40);
             linkedLists.AppendNode(70);
-            linkedLists.InsertNode(40,30);
+            Console.WriteLine("Before deleting:");
             linkedLists.Display();
+            linkedLists.deleteNode(40);
+            Console.WriteLine("\nAfter deleting:");
+            linkedLists.Display();
+            Console.WriteLine("\nSize of LinkedList is " + linkedLists.getCount());
+            //Console.WriteLine("\n-------------------------------");
 
         }
     }
 }
 
-//UC-8
-//Ability to insert 40 after 30 to the Linked List sequence of 56->30->70
+//UC-9
+//Ability to delete 40 from the Linked List sequence of 56->30->40->70 and show the size of LinkedList is 3
+
 //- Write MSTest Test Case as demonstrated in class
-//-Search LinkedList to get Node with key value 30
-//- Then Insert 40 to 30
-//- Final Sequence: 56->30->40->70
+//-Search LinkedList to find node with key value 40
+//- Delete the node
+//- Implement size() and show the Linked List size is 3
+//- Final Sequence: 56->30->70
 
 //Result
 //Add Node After Node value 30
 //Added 56 at start of the linkedlist
 //Added 30 at start of the linkedlist
+//Added 40 at start of the linkedlist
 //Added 70 at start of the linkedlist
-//Added at in between: 40
+//Before deleting:
 // Linked List :
 //56-> 30-> 40-> 70
+//After deleting:
+// Linked List :
+//56-> 30-> 70
+//Size of LinkedList is 3
