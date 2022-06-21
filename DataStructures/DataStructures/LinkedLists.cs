@@ -104,7 +104,7 @@ namespace DataStructure
         }
         public void DeleteNodeAtLast()
         {
-           
+
             if (Head == null & Tail == null)
             {
                 Console.WriteLine("Nothing to delete list is empty");
@@ -115,7 +115,7 @@ namespace DataStructure
             //Check until the temp next nodes's next loction is null
             while (temp.next.next != null)
             {
-               
+
                 temp = temp.next;
             }
             //After getting this node change its location to null
@@ -160,6 +160,24 @@ namespace DataStructure
             // Unlink the node from linked list
             prev.next = temp.next;
         }
+        public void sort()
+        {
+            Node i, j;
+            int temp;
+            for (i = this.Head; i.next != null; i = i.next)
+            {
+                for (j = i.next; j != null; j = j.next)
+                {
+                    if (i.data > j.data)
+                    {
+                        temp = i.data;
+                        i.data = j.data;
+                        j.data = temp;
+                    }
+                }
+            }
+        }
+
         public void Display()
         {
             //temp variable will head
@@ -180,8 +198,7 @@ namespace DataStructure
             }
 
         }
-
-
-
     }
 }
+
+
